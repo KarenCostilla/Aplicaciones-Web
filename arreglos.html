@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Ejercicios de arreglos con JS</title>
+    </head>
+    <body style="background-color: #FEFAF3;">
+        <header class="text-center mb-5 p-4 mt-4 rounded-4 shadow-sm" style="background-color: #5C7057; color: #F6E2E9;">
+            <h1>EJERCICIOS DE ARREGLOS EN JAVA</h1>
+            <p>Karen Lizeth Costilla Gutierrez</p>
+        </header>
+        <main>
+            <section style="background-color: #F6E2E9;" class="mt-4 mb-3 p-4 rounded-4 shadow-sm border">
+                <article>
+                    <h2 class="text-center" style="background-color: #84A282; color: #FEFAF3;">Ejercicio 1</h2>
+                    <form id="formTemperaturas" class="row g-3">
+                        <div class="col-md-6">
+                            <label>Lunes</label>
+                            <input type="number" id="tempLunes"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Martes</label>
+                            <input type="number" id="tempMartes"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Miercoles</label>
+                            <input type="number" id="tempMiercoles"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Jueves</label>
+                            <input type="number" id="tempJueves"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Viernes</label>
+                            <input type="number" id="tempViernes"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Sabado</label>
+                            <input type="number" id="tempSabado"/>
+                        </div>
+                        <div class="col-md-12">
+                            <label>Domingo</label>
+                            <input type="number" id="tempDomingo"/>
+                        </div>
+                        <div class="col-md-12">
+                            <button style="color: #5C7057;" class=" btn btn-light m-3" onclick="temperaturasSemana()">Calcular</button>
+                        </div>
+                    </form>
+                </article>
+                <artcle>
+                    <h3 style="color: #84A282;" class="mt-4 p-3 bg-white rounded-3 shadow-sm">Resultados</h3>
+                    <p id="impPromedio"></p>
+                    <p id="impMaxima"></p>
+                    <p id="impMinima"></p>
+                </artcle>
+            </section>
+            <hr>
+            <section style="background-color: #F6E2E9;" class="mt-4 mb-3 p-4 rounded-4 shadow-sm border">
+                <article>
+                    <h2 class="text-center" style="background-color: #84A282; color: #FEFAF3;">Ejercicio 2</h2>
+                    <form id="formSalario" class="row g-3">
+                        <div>
+                            <label>Puesto:</label>
+                            <select id="puesto">
+                                <option value="0">Diseñador</option>
+                                <option value="1">Programador</option>
+                                <option value="2">Lider</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Nivel:</label>
+                            <select id="nivel">
+                                <option value="0">Newbe</option>
+                                <option value="1">Jr</option>
+                                <option value="2">Sr</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Horas trabajadas:</label>
+                            <input type="number" id="horas"/>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="button" style="color: #5C7057;" class=" btn btn-light m-3" onclick="calcularSalario()">Calcular</button>
+                        </div>
+                    </form>
+                </article>
+                <article>
+                    <h3 style="color: #84A282;" class="mt-4 p-3 bg-white rounded-3 shadow-sm">Salario</h3>
+                    <p id="impSalario"></p>
+                </article>
+            </section>
+            <hr>
+            <section style="background-color: #F6E2E9;" class="mt-4 mb-3 p-4 rounded-4 shadow-sm border">
+                <article>
+                    <h2 class="text-center" style="background-color: #84A282; color: #FEFAF3;">Ejercicio 3</h2>
+                    <button type="button" style="color: #5C7057;" class=" btn btn-light m-3" onclick="mostrarOcho()">Número 8</button>
+                </article>
+                <article class="mt-3">
+                    <h2 style="color: #84A282;" class="mt-4 p-3 bg-white rounded-3 shadow-sm">Figura del 8</h2>
+                    <p id="impOcho" style="font-family: monospace; font-size: 24px;"></p>
+                </article>
+            </section>
+            <hr>
+            <section style="background-color: #F6E2E9;" class="mt-4 mb-3 p-4 rounded-4 shadow-sm border">
+                <article>
+                    <h2 class="text-center" style="background-color: #84A282; color: #FEFAF3;">Ejercicio 4</h2>
+                    <form id="formSplice" class="row g-3">
+                        <div class="col-md-6">
+                            <label>Índice:</label>
+                            <input type="number" id="indiceInicio" min="0" max="9"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>¿Cuántas calificaciones cortar?:</label>
+                            <input type="number" id="cantidadCortar" min="1"/>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="button" style="color: #5C7057;" class=" btn btn-light m-3" onclick="cortarCalif()">Cortar</button>
+                        </div>
+                    </form>
+                </article>
+                <article class="mt-3">
+                    <h3 style="color: #84A282;" class="mt-4 p-3 bg-white rounded-3 shadow-sm">Resultados Splice</h3>
+                    <p id="impOriginal"></p>
+                    <p id="impCortadas"></p>
+                    <p id="impRestantes"></p>
+                </article>
+            </section>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+</html>
+ 
